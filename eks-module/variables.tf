@@ -44,3 +44,7 @@ variable "workers_pricing_type" {
 variable "instance_types" {
   type = list(string)
 }
+
+variable "gitHubActionsAppCIrole" {
+  type = string
+}

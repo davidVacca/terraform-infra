@@ -30,6 +30,10 @@ resource "null_resource" "update_aws_auth5" {
               - system:masters
               rolearn: arn:aws:iam::${data.aws_caller_identity.current.account_id}:role/OrganizationAccountAccessRole
               username: adminRoleUser
+            - groups:
+              - system:masters
+              rolearn: ${var.gitHubActionsAppCIrole}
+              username: gitHubActionsRoleUser  
           
     EOF
     )"
