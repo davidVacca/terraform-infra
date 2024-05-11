@@ -48,8 +48,3 @@ variable "instance_types" {
 variable "gitHubActionsAppCIrole" {
   type = string
 }
-
-variable "gitHubActionsTerraformRole" {
-  type = string
-
-}

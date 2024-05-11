@@ -50,7 +50,4 @@ variable "gitHubActionsAppCIrole" {
 
 }
 
-variable "gitHubActionsTerraformRole" {
-  type = string
 
-}
