@@ -1,5 +1,5 @@
-vpc_id               = "vpc-02d676e7ae58fbc8e"
-subnet_ids           = ["subnet-071c8c8c1dd4c5732", "subnet-0e51b86773f6f6aa4"]
+vpc_id               = "vpc-00593a077ee6f6643"
+subnet_ids           = ["subnet-01965dd422662aa22", "subnet-08fe0bdd54f7ecfea"]
 cluster_version      = "1.28"
 services_cidr        = "10.2.0.0/16"
 stage                = "dev"
