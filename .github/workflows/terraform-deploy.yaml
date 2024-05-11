@@ -34,7 +34,7 @@ jobs:
           aws-region: ${{ env.AWS_REGION }}
 
       - name: Terraform Init
-        run: terraform init -backend-config="project-x-state-bucket-david-${ENVIRONMENT_STAGE}"
+        run: terraform init -backend-config="bucket=project-x-state-bucket-david-dev"
 
       # Checks that all Terraform configuration files adhere to a canonical format
       - name: Terraform Format
