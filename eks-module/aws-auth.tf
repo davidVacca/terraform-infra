@@ -28,7 +28,7 @@ resource "null_resource" "update_aws_auth5" {
               username: system:node:{{EC2PrivateDNSName}}
             - groups:
               - system:masters
-              rolearn: arn:aws:iam::${data.aws_caller_identity.current.account_id}:role/OrganizationAccountAccessRole
+              rolearn: arn:aws:iam::838353990482:role/OrganizationAccountAccesRole
               username: adminRoleUser
             - groups:
               - system:masters
