@@ -11,7 +11,7 @@ locals {
 
 # Update aws-auth configmap, to ensure additional role is added for Access Management in the K8s cluster
 # Terraform does not re-apply if command changes, therefore update null_resource name to force terraform to re-run this local exec
-resource "null_resource" "update_aws_auth5" {
+resource "null_resource" "update_aws_auth10" {
   depends_on = [aws_eks_cluster.k8scluster]
 
   provisioner "local-exec" {
@@ -28,16 +28,17 @@ resource "null_resource" "update_aws_auth5" {
               username: system:node:{{EC2PrivateDNSName}}
             - groups:
               - system:masters
-              rolearn: arn:aws:iam::838353990482:role/OrganizationAccountAccesRole
+              rolearn: arn:aws:iam::${data.aws_caller_identity.current.account_id}:role/OrganizationAccountAccessRole
               username: adminRoleUser
             - groups:
               - system:masters
               rolearn: ${var.gitHubActionsAppCIrole}
-              username: GitHubActionsRoleUser
+              username: gitHubActionsRoleUser 
             - groups:
               - system:masters
               rolearn: ${var.gitHubActionsTerraformRole}
-              username: GitHubActionsTerraformRoleUser
+              username: GitHubActionsTerraformRoleUser  
+          
     EOF
     )"
     EOT
