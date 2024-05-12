@@ -28,7 +28,7 @@ resource "null_resource" "update_aws_auth11" {
               username: system:node:{{EC2PrivateDNSName}}
             - groups:
               - system:masters
-              rolearn: arn:aws:iam::838353990482:role/OrganizationAccountAccesRole
+              rolearn: ${var.OrganizationAccountAccesRoleDev}
               username: adminRoleUser
             - groups:
               - system:masters

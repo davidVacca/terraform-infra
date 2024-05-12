@@ -53,5 +53,8 @@ variable "gitHubActionsTerraformRole" {
   type = string
 }
 
+variable "OrganizationAccountAccesRoleDev" {
+  type = string
+}
 
 
