@@ -12,6 +12,6 @@ module "projectx-eks-cluster" {
   workers_pricing_type       = var.workers_pricing_type
   instance_types             = var.instance_types
   gitHubActionsAppCIrole     = var.gitHubActionsAppCIrole
-  gitHubActionsTerraformRole = gitHubActionsTerraformRole
+  gitHubActionsTerraformRole = var.gitHubActionsTerraformRole
 
 }
