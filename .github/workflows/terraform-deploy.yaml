@@ -58,4 +58,4 @@ jobs:
 
       # # Build infrastructure according to Terraform configuration files
       - name: Terraform destroy
-        run: terraform destroy
+        run: terraform destroy -var-file=project-x-${ENVIRONMENT_STAGE}.tfvars
